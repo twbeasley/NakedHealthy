@@ -12,10 +12,15 @@ class ArticlesController < ApplicationController
     redirect_to articles_path
   end
   
+  def show
+    @article = Article.find(params[:id])
+    @comment = Comment.new
+  end
+  
   
   private
   
   def article_params
-    params.require(:article).permit(:name, :description, :category)
+    params.require(:article).permit(:name, :description, :category, :photo)
   end
 end
