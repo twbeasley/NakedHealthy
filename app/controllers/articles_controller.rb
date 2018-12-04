@@ -17,7 +17,6 @@ class ArticlesController < ApplicationController
     @comment = Comment.new
   end
   
-  
   private
   
   def article_params

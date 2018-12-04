@@ -1,7 +1,7 @@
  <div class="booyah-box" >
   <h1><%= @article.name %></h1>
   <h2><%= @article.description %></h2>  
-</div>
+</div><% image_tag @article.photo %>
 <div class= "clear"></div>
 
 
@@ -35,7 +35,7 @@
 
 <h1>Comments</h1>
 
-<%= @article.comments.each do |comment| %>
+<% @article.comments.each do |comment| %>
   <div>
     <blockquote>
         <%= comment.message %>
