@@ -1,7 +1,7 @@
 <% @articles.each do |article| %>
   <div class="booyah-box" >
-    <h1><%= link_to "article.name", article %></h1>
-    <h2><%= article.description %></h2>  
+    <h1><%= link_to article.name, article %></h1>
+    <h2><%= article.description.to_s.html_safe %></h2>  
   </div>
   <div class="photo-box">
     <%= article.photos.each do |photo| %>
