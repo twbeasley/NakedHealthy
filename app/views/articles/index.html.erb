@@ -1,9 +1,12 @@
 <% @articles.each do |article| %>
   <div class="booyah-box" >
-    <h1><%= article.name %></h1>
+    <h1><%= link_to "article.name", article %></h1>
     <h2><%= article.description %></h2>  
   </div>
   <div class="photo-box">
-    <%= image_tag article.photo %>  
+    <%= article.photos.each do |photo| %>
+      <%= image_tag photo.image %>
+      <%= photo.paragraph %>
+    <% end %>
   </div>
 <% end %>

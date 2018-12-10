@@ -1,12 +1,7 @@
 <div class="booyah-box col-10 offset-1">
-  <h1>Enter Article Details</h1>
-  <%= simple_form_for @article do |f| %>
-    <%= f.input :name %>
-    <%= f.input :description %>
-    <%= f.input :category %>
-    <%= f.input :photo %>
-    <br />
-    <%= f.submit 'Create', class: 'btn btn-primary' %>
-  <% end %>
+  <h1>New Article</h1>
+  <%= render 'form' %>
+  <%= link_to "back", root_path %>
+
   
 </div>

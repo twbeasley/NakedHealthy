@@ -1,0 +1,10 @@
+<% if @article.errors.any? %>
+  <div>
+    <p><%= pluralize(article.errors.count, 'error') %> prevented it form being saved.</p>
+    <ul>
+      <% @article.errors.full_messages.each do |msg| %>
+      <li> <%= msg %> </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
